@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }} · Androx</title>
+<meta name="description" content="Androx ({{ page.title }} / {{ page.subtitle }}) — StepAI Co., Ltd.">
+<meta name="theme-color" content="#0D0A0A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0D0A0A; --bg-2:#0A0707; --surface:#151110; --surface-2:#1F1815;
+  --vermillion:#D94425; --vermillion-light:#FF6B4A;
+  --text:#F5F0EE; --body:#CBC3BE; --muted:#9A908B; --faint:#6E6460;
+  --border:rgba(217,68,37,.14); --hair:rgba(245,240,238,.08);
+  --display:"Bricolage Grotesque",-apple-system,system-ui,sans-serif;
+  --sans:"Hanken Grotesk","Zen Kaku Gothic New",-apple-system,system-ui,sans-serif;
+  --maxw:680px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--body);
+  font-family:var(--sans); font-size:17px; line-height:1.78;
+  font-weight:400; letter-spacing:.005em;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+/* atmosphere */
+.glow{position:fixed; inset:0; z-index:0; pointer-events:none;
+  background:
+    radial-gradient(60% 42% at 50% -8%, rgba(217,68,37,.20), transparent 60%),
+    radial-gradient(40% 30% at 88% 4%, rgba(255,107,74,.10), transparent 70%);
+  filter:saturate(1.1);
+}
+.grain{position:fixed; inset:0; z-index:1; pointer-events:none; opacity:.035; mix-blend-mode:soft-light;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+.wrap{position:relative; z-index:2; max-width:var(--maxw); margin:0 auto; padding:0 24px;}
+
+/* header */
+.site-header{position:sticky; top:0; z-index:50;
+  backdrop-filter:saturate(160%) blur(14px); -webkit-backdrop-filter:saturate(160%) blur(14px);
+  background:rgba(13,10,10,.66); border-bottom:1px solid var(--hair);}
+.site-header .bar{max-width:920px; margin:0 auto; padding:16px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px;}
+.wordmark{font-family:var(--display); font-weight:800; font-size:1.12rem; letter-spacing:.16em;
+  color:var(--text); text-decoration:none; display:inline-flex;}
+.wordmark span{color:var(--vermillion)}
+.nav{display:flex; gap:6px; align-items:center}
+.nav a{font-size:.74rem; text-transform:uppercase; letter-spacing:.14em; font-weight:600;
+  color:var(--muted); text-decoration:none; padding:8px 12px; border-radius:999px; transition:color .2s ease, background .2s ease;}
+.nav a:hover{color:var(--text)}
+.nav a.active{color:var(--vermillion); background:rgba(217,68,37,.08)}
+
+/* hero */
+.hero{max-width:920px; margin:0 auto; padding:84px 24px 40px; position:relative; z-index:2;
+  animation:rise .7s cubic-bezier(.2,.7,.2,1) both;}
+.eyebrow{font-family:var(--display); font-weight:700; font-size:.72rem; text-transform:uppercase;
+  letter-spacing:.32em; color:var(--vermillion); margin:0 0 18px;}
+.hero h1{font-family:var(--display); font-weight:700; line-height:1.04; letter-spacing:-.02em;
+  font-size:clamp(2.5rem,7vw,4.4rem); margin:0; color:var(--text);
+  background:linear-gradient(180deg,#FFFFFF, #E7DED9 78%); -webkit-background-clip:text; background-clip:text; color:transparent;}
+.hero .sub{font-size:1.05rem; color:var(--muted); margin:14px 0 0; font-weight:500;}
+.hero .meta{font-size:.82rem; color:var(--faint); margin:22px 0 0; letter-spacing:.04em;}
+.langtoggle{display:inline-flex; gap:8px; margin-top:26px}
+.langtoggle a{font-size:.8rem; font-weight:600; letter-spacing:.04em; color:var(--body); text-decoration:none;
+  padding:9px 18px; border:1px solid var(--hair); border-radius:999px; transition:all .2s ease; background:rgba(255,255,255,.015);}
+.langtoggle a:hover{border-color:var(--vermillion); color:var(--text); box-shadow:0 0 0 1px rgba(217,68,37,.25), 0 8px 30px -12px rgba(217,68,37,.5)}
+
+.divider{max-width:920px; margin:14px auto 0; padding:0 24px; position:relative; z-index:2}
+.divider::after{content:""; display:block; height:1px;
+  background:linear-gradient(90deg, transparent, var(--border) 18%, var(--border) 82%, transparent);}
+
+/* prose */
+.prose{padding:48px 0 24px; animation:rise .8s .06s cubic-bezier(.2,.7,.2,1) both;}
+.prose>*{max-width:none}
+.prose a{color:var(--vermillion-light); text-decoration:none; border-bottom:1px solid rgba(255,107,74,.32); transition:border-color .2s, color .2s;}
+.prose a:hover{color:#fff; border-color:var(--vermillion-light)}
+.prose h1{font-family:var(--display); font-weight:700; font-size:clamp(1.7rem,4.4vw,2.3rem); letter-spacing:-.01em;
+  color:var(--text); margin:64px 0 8px; padding-top:34px; border-top:1px solid var(--hair); scroll-margin-top:84px;}
+.prose h1:first-child{margin-top:8px; border-top:0; padding-top:0}
+.prose h2{font-family:var(--display); font-weight:600; font-size:1.32rem; letter-spacing:-.005em;
+  color:var(--text); margin:46px 0 14px; padding-left:18px; position:relative; line-height:1.3;}
+.prose h2::before{content:""; position:absolute; left:0; top:.18em; bottom:.18em; width:4px; border-radius:4px;
+  background:linear-gradient(180deg,var(--vermillion-light),var(--vermillion));}
+.prose h3{font-weight:700; font-size:1.04rem; color:var(--text); margin:30px 0 8px; letter-spacing:.01em}
+.prose p{margin:0 0 18px}
+.prose strong{color:var(--text); font-weight:700}
+.prose ul,.prose ol{margin:0 0 20px; padding-left:1.35em}
+.prose li{margin:7px 0; padding-left:.2em}
+.prose ul li::marker{color:var(--vermillion)}
+.prose ol li::marker{color:var(--vermillion); font-variant-numeric:tabular-nums; font-weight:600}
+.prose hr{border:0; height:1px; margin:60px 0;
+  background:linear-gradient(90deg,transparent,var(--border),transparent); position:relative;}
+.prose hr::after{content:"◆"; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+  color:var(--vermillion); font-size:.7rem; background:var(--bg); padding:0 14px;}
+.prose table{width:100%; border-collapse:collapse; margin:0 0 22px; font-size:.92rem}
+.prose th,.prose td{border:1px solid var(--hair); padding:10px 12px; text-align:left}
+.prose th{background:rgba(255,255,255,.03); color:var(--text); font-weight:600}
+:lang(ja),.prose :is(p,li,h2,h3){}
+.prose{font-feature-settings:"palt" 1}
+
+/* footer */
+.site-footer{position:relative; z-index:2; margin-top:60px; border-top:1px solid var(--hair);
+  background:linear-gradient(180deg,transparent,rgba(217,68,37,.04));}
+.site-footer .inner{max-width:920px; margin:0 auto; padding:40px 24px 56px; display:flex; flex-wrap:wrap; gap:18px 28px; align-items:center; justify-content:space-between}
+.foot-brand{font-family:var(--display); font-weight:800; letter-spacing:.14em; color:var(--text); font-size:.95rem}
+.foot-brand span.x{color:var(--vermillion)}
+.foot-brand small{display:block; font-family:var(--sans); font-weight:500; letter-spacing:.02em; color:var(--faint); font-size:.74rem; margin-top:6px}
+.foot-links{display:flex; gap:18px; flex-wrap:wrap}
+.foot-links a{color:var(--muted); text-decoration:none; font-size:.84rem; font-weight:500; transition:color .2s}
+.foot-links a:hover{color:var(--vermillion-light)}
+.foot-copy{flex-basis:100%; color:var(--faint); font-size:.76rem; margin:8px 0 0}
+
+@keyframes rise{from{opacity:0; transform:translateY(16px)} to{opacity:1; transform:none}}
+
+@media (max-width:560px){
+  body{font-size:16px}
+  .hero{padding:60px 24px 32px}
+  .site-header .bar{padding:14px 18px}
+  .nav a{padding:7px 9px}
+  .wrap,.hero,.site-header .bar,.site-footer .inner,.divider{padding-left:18px; padding-right:18px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero,.prose{animation:none}
+  *{transition:none!important}
+}
+:focus-visible{outline:2px solid var(--vermillion-light); outline-offset:3px; border-radius:4px}
+</style>
+</head>
+<body id="top">
+<div class="glow" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="wordmark" href="./">ANDRO<span>X</span></a>
+    <nav class="nav">
+      <a href="./" class="{% if page.kind == 'privacy' %}active{% endif %}">Privacy</a>
+      <a href="./support" class="{% if page.kind == 'support' %}active{% endif %}">Support</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <p class="eyebrow">{% if page.kind == 'support' %}Help Center{% else %}Legal{% endif %}</p>
+  <h1>{{ page.title }}</h1>
+  <p class="sub">{{ page.subtitle }}</p>
+  <p class="meta">Last updated · {{ page.updated }} &nbsp;·&nbsp; StepAI Co., Ltd.</p>
+  {% if page.kind == 'privacy' %}
+  <div class="langtoggle">
+    <a href="#en">English</a>
+    <a href="#ja">日本語</a>
+  </div>
+  {% endif %}
+</section>
+<div class="divider"></div>
+
+<main class="wrap">
+  <article class="prose">
+    {{ content }}
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <div class="foot-brand">ANDRO<span class="x">X</span><small>Wellness, built from habits. / 男性のウェルネスを、習慣から。</small></div>
+    <div class="foot-links">
+      <a href="./">Privacy Policy</a>
+      <a href="./support">Support</a>
+      <a href="mailto:info@stepai.co.jp">info@stepai.co.jp</a>
+      <a href="#top">↑ Top</a>
+    </div>
+    <p class="foot-copy">© 2026 StepAI Co., Ltd. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

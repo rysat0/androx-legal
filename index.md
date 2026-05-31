@@ -1,7 +1,277 @@
-# Androx プライバシーポリシー / Privacy Policy
+---
+layout: default
+title: Privacy Policy
+subtitle: プライバシーポリシー
+kind: privacy
+updated: June 1, 2026
+---
 
+<a id="en"></a>
+
+# Privacy Policy (English)
+
+Last Updated: June 1, 2026
+
+StepAI Co., Ltd. ("StepAI," "we," "us," or "our") operates the men's health application "Androx" (the "Service"). This Privacy Policy explains how we collect, use, disclose, and protect personal information, health and fitness information, and other user information in connection with the Service.
+
+The Service does not provide medical diagnosis, treatment, medication guidance, or professional medical advice. Scores, insights, articles, reports, notifications, and other information provided through the Service are intended for general wellness and lifestyle management purposes only. They do not measure, diagnose, estimate, or guarantee blood testosterone levels or any other hormone levels. You should consult a physician or other qualified healthcare professional before making decisions about your health, symptoms, treatment, medications, or lab results.
+
+## 1. Scope
+
+This Privacy Policy applies to information we collect, process, or store in connection with your use of the Service.
+
+## 2. Information We Collect or Process
+
+### 2.1 Account Information
+
+The Service uses Sign in with Apple and Supabase Auth for account authentication. The only information processed on our servers or by Supabase is limited to:
+
+1. Email address
+2. User identifier provided through Sign in with Apple
+3. Authentication user ID created by Supabase Auth
+4. Temporary Apple authorization code required for account deletion
+
+Your display name may be initialized locally on your device based on the local part of your email address, but it is not sent to our servers.
+
+### 2.2 Profile and Onboarding Information
+
+The Service may store the following profile and onboarding information only on your device:
+
+1. Primary intent, such as natural optimizer, low T curious, on TRT, or fertility conscious
+2. Main goal
+3. Training frequency
+4. Diet tendency
+5. Height
+6. Starting weight
+7. Unit settings
+8. Target score
+9. Other settings you enter in the Service
+
+Date of birth, age, and target weight may be used temporarily for app functionality, but they are not stored on disk and are not sent to our servers.
+
+### 2.3 Apple Health / HealthKit Data
+
+If you grant explicit permission, the Service may read the following health and fitness data from Apple Health or HealthKit:
+
+1. Steps
+2. HRV
+3. Body weight
+4. Active energy
+5. Resting heart rate
+6. VO2 Max
+7. Wrist temperature during sleep
+8. Time in daylight
+9. Body fat percentage
+10. Blood oxygen wellness / SpO2
+11. Sleep analysis
+12. Mindfulness minutes
+13. Workout duration and workout count
+
+Sleep analysis data may be used within the Service to calculate total sleep duration, deep sleep, REM sleep, sleep onset time, and related in-app displays.
+
+The Service does not write data to HealthKit. All Apple Health / HealthKit data is processed and stored only on your device. It is never sent to our servers, Supabase, external cloud services, advertising providers, analytics providers, AI services, or data brokers.
+
+### 2.4 Manual Logs
+
+If you choose to enter information in the Record tab or other parts of the Service, the following information may be stored only on your device:
+
+1. Whether you trained
+2. Whether you had cold exposure
+3. Whether you had sunlight exposure
+4. Whether you took supplements
+5. Whether you avoided alcohol
+6. Whether you had good sleep
+7. Whether you had sexual activity
+8. Sleep duration
+9. Body weight
+10. Calories
+11. Steps
+12. Body fat percentage
+13. HRV
+14. Workout minutes
+15. Mindfulness minutes
+
+These manual logs are stored only on your device and are not sent to our servers. Sexual activity logs are sensitive information. We do not use such information for advertising, marketing, analytics, sale, or disclosure to third parties.
+
+### 2.5 Lab Values
+
+The Service does not currently collect, store, or transmit lab values, including Total Testosterone, Free Testosterone, SHBG, Estradiol, or similar blood test values. The Service may include educational content about hormones or lab values in Learn articles, but it does not provide a user interface or data field for entering or storing your lab values.
+
+### 2.6 Subjective Symptom Logs
+
+The Service does not currently collect, store, or transmit subjective symptom logs such as mood, libido, focus, or subjective recovery.
+
+### 2.7 Technical Information
+
+The Service does not use advertising SDKs, analytics SDKs, crash reporting SDKs, attribution SDKs, AI SDKs, or third-party tracking tools. Technical information processed on our servers is limited to what is necessary for account authentication and account deletion through Supabase Auth.
+
+## 3. Where Information Is Stored
+
+### 3.1 Information Stored Only on Your Device
+
+The following information is stored only on your device:
+
+1. Apple Health / HealthKit data
+2. Manual logs
+3. Sexual activity logs
+4. Scores
+5. Weekly reports
+6. Profile and onboarding information
+7. In-app settings
+8. Local notification settings
+
+This information is not sent to our servers, Supabase, external cloud services, advertising providers, analytics providers, or AI services. The Service does not currently use iCloud or CloudKit synchronization.
+
+### 3.2 Information Processed on Servers
+
+We use Supabase Auth for account authentication. The information sent to and stored by Supabase is limited to your email address and authentication user identifiers obtained through Sign in with Apple. When you delete your account, a temporary Apple authorization code may be sent to a Supabase account deletion function solely for the purpose of deleting your account.
+
+### 3.3 Data Export Feature
+
+If you choose to use the data export feature in the Service, certain logs stored on your device may be generated in JSON format and shared outside your device through the iOS share sheet or other user-initiated sharing mechanisms. The exported data is limited to the date and your records of training, cold exposure, sunlight exposure, supplement intake, alcohol avoidance, and good sleep, and—only where entered—sleep duration, body weight, calories, and steps. Sexual activity logs and detailed biometrics such as HRV, body fat percentage, sleep stages, and resting heart rate are not included in the export.
+
+This sharing occurs only when you affirmatively choose to export or share the data. We do not send or store the exported data on our servers.
+
+## 4. How We Use Information
+
+We use information for the following purposes:
+
+1. To provide, operate, and maintain the Service
+2. To authenticate accounts through Sign in with Apple and Supabase Auth
+3. To process account deletion requests and provide user support
+4. To calculate lifestyle-based scores on your device based on sleep, activity, recovery, body composition, and habits
+5. To provide personalized actions, notifications, reminders, and weekly reports on your device
+6. To maintain and improve the safety, quality, and usability of the Service
+7. To prevent and investigate misuse, security incidents, or violations of our terms
+8. To comply with legal obligations, resolve disputes, conduct audits, and protect rights
+9. For purposes reasonably related to the above
+
+We do not use Apple Health / HealthKit data, health and fitness information, manual logs, or sexual activity logs for advertising, marketing, targeted advertising, user tracking, sale, or disclosure to data brokers.
+
+## 5. Apple Health / HealthKit Data
+
+We access Apple Health or HealthKit data only with your explicit permission. We use Apple Health / HealthKit data only for:
+
+1. In-app score display
+2. Insights related to sleep, activity, recovery, body composition, and lifestyle habits
+3. Personalized action recommendations
+4. Weekly reports and reminders
+5. Helping you manage your own wellness and lifestyle habits
+
+We do not send Apple Health / HealthKit data to our servers, Supabase, external cloud services, advertising providers, analytics providers, AI services, or data brokers. We do not use Apple Health / HealthKit data for advertising, marketing, user tracking, or use-based data mining. Apple's App Review Guidelines state that data gathered from HealthKit may not be used for marketing, advertising, or use-based data mining.
+
+## 6. No AI Processing
+
+The Service does not currently use OpenAI, large language models, external AI APIs, AI SDKs, or AI-based personal data processing. Scores, action recommendations, and weekly reports are generated through deterministic logic running on your device. We do not send your personal information, Apple Health / HealthKit data, health and fitness information, manual logs, or sexual activity logs to AI services.
+
+## 7. No Advertising, Analytics, or Tracking
+
+The Service does not currently use:
+
+1. Advertising SDKs
+2. Third-party advertising
+3. In-app advertising
+4. Analytics SDKs
+5. Crash reporting SDKs
+6. Attribution SDKs
+7. Cross-app tracking
+8. IDFA
+9. Tracking that requires App Tracking Transparency permission
+10. Data brokers
+
+We do not sell your personal information.
+
+## 8. Third-Party Service Providers
+
+We use Supabase to provide account authentication and account deletion functionality. Supabase processes your email address and authentication user identifiers as our service provider. We do not send Apple Health / HealthKit data, manual logs, sexual activity logs, scores, weekly reports, profile information, or onboarding information to Supabase.
+
+We do not currently use Firebase, Google Analytics, AdMob, Meta Pixel, Mixpanel, Amplitude, PostHog, Sentry, AppsFlyer, RevenueCat, Stripe, OneSignal, OpenAI, or any external AI service.
+
+## 9. Disclosure of Information
+
+We do not disclose personal information to third parties except in the following cases:
+
+1. With your consent
+2. To comply with applicable laws, regulations, legal processes, or governmental requests
+3. To protect the life, safety, property, or rights of users, us, or others
+4. In connection with a merger, acquisition, reorganization, or transfer of business
+5. To service providers that process information on our behalf and only as necessary to provide the Service
+6. To enforce our terms or investigate potential violations
+
+We do not sell or share Apple Health / HealthKit data, health and fitness information, manual logs, or sexual activity logs with advertisers, analytics providers, AI services, or data brokers.
+
+## 10. Cookies and Similar Technologies
+
+The iOS app does not use cookies, mobile advertising IDs, IDFA, or similar identifiers for advertising or cross-app tracking. If we operate a website related to the Service, the website may use cookies or similar technologies. In that case, we will provide information about the purposes, recipients, and opt-out methods in a manner accessible to users.
+
+## 11. Data Retention and Account Deletion
+
+Information stored on your device remains on your device until you delete it in the app, delete the app, or otherwise delete the data from your device.
+
+Your email address and authentication user identifiers processed through Supabase Auth are retained for as long as necessary to maintain your account. If you use the in-app "Delete Account" feature, we promptly delete your account information in Supabase Auth and also delete the local data stored on that device (such as your logs and weekly reports) and sign you out. We will delete or anonymize remaining account information within a reasonable period, except where retention is required or permitted by law, security, fraud prevention, dispute resolution, or audit purposes.
+
+## 12. Security
+
+We implement reasonable administrative, technical, and organizational safeguards designed to protect information against unauthorized access, loss, misuse, disclosure, alteration, or destruction. These safeguards may include:
+
+1. Access controls
+2. Encryption in transit
+3. Secure handling of authentication credentials
+4. Service provider management
+5. Ongoing review of security practices
+6. Monitoring for unauthorized access and service issues
+7. Internal governance measures where appropriate
+
+Apple Health / HealthKit data and manual logs are stored on your device and are not sent to our servers. No method of transmission or storage is completely secure, and we cannot guarantee absolute security.
+
+## 13. Data Breach Notification
+
+If we become aware of a security incident involving personal information, we will take appropriate steps in accordance with applicable laws. For U.S. users, if the Service is subject to the FTC Health Breach Notification Rule or other applicable breach notification laws, we will provide required notices to affected users, regulators, and other parties as required.
+
+## 14. Your Rights and Choices
+
+Depending on your location and applicable law, you may have the right to:
+
+1. Request disclosure of the purposes of use of your personal information
+2. Access your personal information or records of third-party disclosure
+3. Correct, add to, or delete your personal information
+4. Request suspension of use of your personal information
+5. Request suspension of disclosure to third parties
+6. Delete your account
+7. Withdraw consent
+
+To exercise these rights, please contact us using the contact information below. We may need to verify your identity before processing your request.
+
+## 15. Supplemental Notice for U.S. Residents
+
+Residents of certain U.S. states may have additional rights under applicable privacy laws, including rights to know, access, correct, delete, opt out of sale or sharing, and limit the use of sensitive personal information. Under the California Consumer Privacy Act, information concerning a consumer's health, sex life, or sexual orientation is described as sensitive personal information.
+
+We do not sell your personal information. We do not sell or share Apple Health / HealthKit data, health and fitness information, manual logs, or sexual activity logs with advertisers, analytics providers, AI services, or data brokers.
+
+## 16. Children
+
+The Service is intended for users who are 18 years of age or older. If you are under 18, you may not use the Service. If we learn that we have collected personal information from a user under 18, we will take appropriate steps to delete such information in accordance with applicable law.
+
+## 17. International Data Processing
+
+The Service is operated by StepAI Co., Ltd., a company located in Japan. When we use third-party services such as Supabase Auth, your email address and authentication user identifiers may be processed or stored on servers or by service providers located outside your country of residence. We take appropriate measures to protect your information in accordance with applicable law.
+
+## 18. Changes to This Privacy Policy
+
+We may update this Privacy Policy from time to time due to changes in laws, the Service, or our data practices. If we make material changes, we will notify you by posting the updated policy in the Service, on our website, or by other appropriate means. The "Last Updated" date indicates when this Privacy Policy was last revised.
+
+## 19. Contact Us
+
+If you have questions or requests regarding this Privacy Policy or our data practices, please contact us at:
+
+- Operator: StepAI Co., Ltd.
+- Representative: Egao Ozawa
+- Address: 4-9-3 MinamiAzabu, Minato-ku, Tokyo 106-0047, Japan
+- Email: info@stepai.co.jp
 
 ---
+
+<a id="ja"></a>
 
 # プライバシーポリシー（日本語版）
 
@@ -265,266 +535,3 @@ Supabase Auth上で処理されるメールアドレスおよび認証用ユー�
 - 代表者名：小澤 えがお（英語表記：Egao Ozawa）
 - 住所：〒106-0047 東京都港区南麻布4-9-3
 - メールアドレス：info@stepai.co.jp
-
----
-
-# Privacy Policy (English)
-
-Last Updated: June 1, 2026
-
-StepAI Co., Ltd. ("StepAI," "we," "us," or "our") operates the men's health application "Androx" (the "Service"). This Privacy Policy explains how we collect, use, disclose, and protect personal information, health and fitness information, and other user information in connection with the Service.
-
-The Service does not provide medical diagnosis, treatment, medication guidance, or professional medical advice. Scores, insights, articles, reports, notifications, and other information provided through the Service are intended for general wellness and lifestyle management purposes only. They do not measure, diagnose, estimate, or guarantee blood testosterone levels or any other hormone levels. You should consult a physician or other qualified healthcare professional before making decisions about your health, symptoms, treatment, medications, or lab results.
-
-## 1. Scope
-
-This Privacy Policy applies to information we collect, process, or store in connection with your use of the Service.
-
-## 2. Information We Collect or Process
-
-### 2.1 Account Information
-
-The Service uses Sign in with Apple and Supabase Auth for account authentication. The only information processed on our servers or by Supabase is limited to:
-
-1. Email address
-2. User identifier provided through Sign in with Apple
-3. Authentication user ID created by Supabase Auth
-4. Temporary Apple authorization code required for account deletion
-
-Your display name may be initialized locally on your device based on the local part of your email address, but it is not sent to our servers.
-
-### 2.2 Profile and Onboarding Information
-
-The Service may store the following profile and onboarding information only on your device:
-
-1. Primary intent, such as natural optimizer, low T curious, on TRT, or fertility conscious
-2. Main goal
-3. Training frequency
-4. Diet tendency
-5. Height
-6. Starting weight
-7. Unit settings
-8. Target score
-9. Other settings you enter in the Service
-
-Date of birth, age, and target weight may be used temporarily for app functionality, but they are not stored on disk and are not sent to our servers.
-
-### 2.3 Apple Health / HealthKit Data
-
-If you grant explicit permission, the Service may read the following health and fitness data from Apple Health or HealthKit:
-
-1. Steps
-2. HRV
-3. Body weight
-4. Active energy
-5. Resting heart rate
-6. VO2 Max
-7. Wrist temperature during sleep
-8. Time in daylight
-9. Body fat percentage
-10. Blood oxygen wellness / SpO2
-11. Sleep analysis
-12. Mindfulness minutes
-13. Workout duration and workout count
-
-Sleep analysis data may be used within the Service to calculate total sleep duration, deep sleep, REM sleep, sleep onset time, and related in-app displays.
-
-The Service does not write data to HealthKit. All Apple Health / HealthKit data is processed and stored only on your device. It is never sent to our servers, Supabase, external cloud services, advertising providers, analytics providers, AI services, or data brokers.
-
-### 2.4 Manual Logs
-
-If you choose to enter information in the Record tab or other parts of the Service, the following information may be stored only on your device:
-
-1. Whether you trained
-2. Whether you had cold exposure
-3. Whether you had sunlight exposure
-4. Whether you took supplements
-5. Whether you avoided alcohol
-6. Whether you had good sleep
-7. Whether you had sexual activity
-8. Sleep duration
-9. Body weight
-10. Calories
-11. Steps
-12. Body fat percentage
-13. HRV
-14. Workout minutes
-15. Mindfulness minutes
-
-These manual logs are stored only on your device and are not sent to our servers. Sexual activity logs are sensitive information. We do not use such information for advertising, marketing, analytics, sale, or disclosure to third parties.
-
-### 2.5 Lab Values
-
-The Service does not currently collect, store, or transmit lab values, including Total Testosterone, Free Testosterone, SHBG, Estradiol, or similar blood test values. The Service may include educational content about hormones or lab values in Learn articles, but it does not provide a user interface or data field for entering or storing your lab values.
-
-### 2.6 Subjective Symptom Logs
-
-The Service does not currently collect, store, or transmit subjective symptom logs such as mood, libido, focus, or subjective recovery.
-
-### 2.7 Technical Information
-
-The Service does not use advertising SDKs, analytics SDKs, crash reporting SDKs, attribution SDKs, AI SDKs, or third-party tracking tools. Technical information processed on our servers is limited to what is necessary for account authentication and account deletion through Supabase Auth.
-
-## 3. Where Information Is Stored
-
-### 3.1 Information Stored Only on Your Device
-
-The following information is stored only on your device:
-
-1. Apple Health / HealthKit data
-2. Manual logs
-3. Sexual activity logs
-4. Scores
-5. Weekly reports
-6. Profile and onboarding information
-7. In-app settings
-8. Local notification settings
-
-This information is not sent to our servers, Supabase, external cloud services, advertising providers, analytics providers, or AI services. The Service does not currently use iCloud or CloudKit synchronization.
-
-### 3.2 Information Processed on Servers
-
-We use Supabase Auth for account authentication. The information sent to and stored by Supabase is limited to your email address and authentication user identifiers obtained through Sign in with Apple. When you delete your account, a temporary Apple authorization code may be sent to a Supabase account deletion function solely for the purpose of deleting your account.
-
-### 3.3 Data Export Feature
-
-If you choose to use the data export feature in the Service, certain logs stored on your device may be generated in JSON format and shared outside your device through the iOS share sheet or other user-initiated sharing mechanisms. The exported data is limited to the date and your records of training, cold exposure, sunlight exposure, supplement intake, alcohol avoidance, and good sleep, and—only where entered—sleep duration, body weight, calories, and steps. Sexual activity logs and detailed biometrics such as HRV, body fat percentage, sleep stages, and resting heart rate are not included in the export.
-
-This sharing occurs only when you affirmatively choose to export or share the data. We do not send or store the exported data on our servers.
-
-## 4. How We Use Information
-
-We use information for the following purposes:
-
-1. To provide, operate, and maintain the Service
-2. To authenticate accounts through Sign in with Apple and Supabase Auth
-3. To process account deletion requests and provide user support
-4. To calculate lifestyle-based scores on your device based on sleep, activity, recovery, body composition, and habits
-5. To provide personalized actions, notifications, reminders, and weekly reports on your device
-6. To maintain and improve the safety, quality, and usability of the Service
-7. To prevent and investigate misuse, security incidents, or violations of our terms
-8. To comply with legal obligations, resolve disputes, conduct audits, and protect rights
-9. For purposes reasonably related to the above
-
-We do not use Apple Health / HealthKit data, health and fitness information, manual logs, or sexual activity logs for advertising, marketing, targeted advertising, user tracking, sale, or disclosure to data brokers.
-
-## 5. Apple Health / HealthKit Data
-
-We access Apple Health or HealthKit data only with your explicit permission. We use Apple Health / HealthKit data only for:
-
-1. In-app score display
-2. Insights related to sleep, activity, recovery, body composition, and lifestyle habits
-3. Personalized action recommendations
-4. Weekly reports and reminders
-5. Helping you manage your own wellness and lifestyle habits
-
-We do not send Apple Health / HealthKit data to our servers, Supabase, external cloud services, advertising providers, analytics providers, AI services, or data brokers. We do not use Apple Health / HealthKit data for advertising, marketing, user tracking, or use-based data mining. Apple's App Review Guidelines state that data gathered from HealthKit may not be used for marketing, advertising, or use-based data mining.
-
-## 6. No AI Processing
-
-The Service does not currently use OpenAI, large language models, external AI APIs, AI SDKs, or AI-based personal data processing. Scores, action recommendations, and weekly reports are generated through deterministic logic running on your device. We do not send your personal information, Apple Health / HealthKit data, health and fitness information, manual logs, or sexual activity logs to AI services.
-
-## 7. No Advertising, Analytics, or Tracking
-
-The Service does not currently use:
-
-1. Advertising SDKs
-2. Third-party advertising
-3. In-app advertising
-4. Analytics SDKs
-5. Crash reporting SDKs
-6. Attribution SDKs
-7. Cross-app tracking
-8. IDFA
-9. Tracking that requires App Tracking Transparency permission
-10. Data brokers
-
-We do not sell your personal information.
-
-## 8. Third-Party Service Providers
-
-We use Supabase to provide account authentication and account deletion functionality. Supabase processes your email address and authentication user identifiers as our service provider. We do not send Apple Health / HealthKit data, manual logs, sexual activity logs, scores, weekly reports, profile information, or onboarding information to Supabase.
-
-We do not currently use Firebase, Google Analytics, AdMob, Meta Pixel, Mixpanel, Amplitude, PostHog, Sentry, AppsFlyer, RevenueCat, Stripe, OneSignal, OpenAI, or any external AI service.
-
-## 9. Disclosure of Information
-
-We do not disclose personal information to third parties except in the following cases:
-
-1. With your consent
-2. To comply with applicable laws, regulations, legal processes, or governmental requests
-3. To protect the life, safety, property, or rights of users, us, or others
-4. In connection with a merger, acquisition, reorganization, or transfer of business
-5. To service providers that process information on our behalf and only as necessary to provide the Service
-6. To enforce our terms or investigate potential violations
-
-We do not sell or share Apple Health / HealthKit data, health and fitness information, manual logs, or sexual activity logs with advertisers, analytics providers, AI services, or data brokers.
-
-## 10. Cookies and Similar Technologies
-
-The iOS app does not use cookies, mobile advertising IDs, IDFA, or similar identifiers for advertising or cross-app tracking. If we operate a website related to the Service, the website may use cookies or similar technologies. In that case, we will provide information about the purposes, recipients, and opt-out methods in a manner accessible to users.
-
-## 11. Data Retention and Account Deletion
-
-Information stored on your device remains on your device until you delete it in the app, delete the app, or otherwise delete the data from your device.
-
-Your email address and authentication user identifiers processed through Supabase Auth are retained for as long as necessary to maintain your account. If you use the in-app "Delete Account" feature, we promptly delete your account information in Supabase Auth and also delete the local data stored on that device (such as your logs and weekly reports) and sign you out. We will delete or anonymize remaining account information within a reasonable period, except where retention is required or permitted by law, security, fraud prevention, dispute resolution, or audit purposes.
-
-## 12. Security
-
-We implement reasonable administrative, technical, and organizational safeguards designed to protect information against unauthorized access, loss, misuse, disclosure, alteration, or destruction. These safeguards may include:
-
-1. Access controls
-2. Encryption in transit
-3. Secure handling of authentication credentials
-4. Service provider management
-5. Ongoing review of security practices
-6. Monitoring for unauthorized access and service issues
-7. Internal governance measures where appropriate
-
-Apple Health / HealthKit data and manual logs are stored on your device and are not sent to our servers. No method of transmission or storage is completely secure, and we cannot guarantee absolute security.
-
-## 13. Data Breach Notification
-
-If we become aware of a security incident involving personal information, we will take appropriate steps in accordance with applicable laws. For U.S. users, if the Service is subject to the FTC Health Breach Notification Rule or other applicable breach notification laws, we will provide required notices to affected users, regulators, and other parties as required.
-
-## 14. Your Rights and Choices
-
-Depending on your location and applicable law, you may have the right to:
-
-1. Request disclosure of the purposes of use of your personal information
-2. Access your personal information or records of third-party disclosure
-3. Correct, add to, or delete your personal information
-4. Request suspension of use of your personal information
-5. Request suspension of disclosure to third parties
-6. Delete your account
-7. Withdraw consent
-
-To exercise these rights, please contact us using the contact information below. We may need to verify your identity before processing your request.
-
-## 15. Supplemental Notice for U.S. Residents
-
-Residents of certain U.S. states may have additional rights under applicable privacy laws, including rights to know, access, correct, delete, opt out of sale or sharing, and limit the use of sensitive personal information. Under the California Consumer Privacy Act, information concerning a consumer's health, sex life, or sexual orientation is described as sensitive personal information.
-
-We do not sell your personal information. We do not sell or share Apple Health / HealthKit data, health and fitness information, manual logs, or sexual activity logs with advertisers, analytics providers, AI services, or data brokers.
-
-## 16. Children
-
-The Service is intended for users who are 18 years of age or older. If you are under 18, you may not use the Service. If we learn that we have collected personal information from a user under 18, we will take appropriate steps to delete such information in accordance with applicable law.
-
-## 17. International Data Processing
-
-The Service is operated by StepAI Co., Ltd., a company located in Japan. When we use third-party services such as Supabase Auth, your email address and authentication user identifiers may be processed or stored on servers or by service providers located outside your country of residence. We take appropriate measures to protect your information in accordance with applicable law.
-
-## 18. Changes to This Privacy Policy
-
-We may update this Privacy Policy from time to time due to changes in laws, the Service, or our data practices. If we make material changes, we will notify you by posting the updated policy in the Service, on our website, or by other appropriate means. The "Last Updated" date indicates when this Privacy Policy was last revised.
-
-## 19. Contact Us
-
-If you have questions or requests regarding this Privacy Policy or our data practices, please contact us at:
-
-- Operator: StepAI Co., Ltd.
-- Representative: Egao Ozawa
-- Address: 4-9-3 MinamiAzabu, Minato-ku, Tokyo 106-0047, Japan
-- Email: info@stepai.co.jp
