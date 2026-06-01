@@ -4,7 +4,7 @@
   --text:#F5F0EE; --dim:rgba(245,240,238,.62); --faint:rgba(245,240,238,.40);
   --hair:rgba(245,240,238,.09);
   --accent:#D94425; --accent-br:#FF6B4A;
-  --maxw:1200px;
+  --maxw:1320px;
   --sans:-apple-system,"SF Pro Text","SF Pro Display","Hanken Grotesk",system-ui,"Segoe UI",sans-serif;
   --ease:cubic-bezier(.2,.7,.2,1);
   --ease-out:cubic-bezier(.16,1,.3,1);
@@ -116,7 +116,7 @@ body::after{content:""; position:fixed; inset:0; z-index:1; pointer-events:none;
 .textlink{color:var(--accent-br); font-weight:600; border-bottom:1px solid rgba(255,107,74,.35); padding-bottom:2px}
 .textlink:hover{color:#fff}
 .privacy__viz{display:flex; justify-content:center; position:relative}
-.privacy__viz .phone{max-width:300px}
+.privacy__viz .phone{max-width:340px}
 .dot{position:absolute; width:10px; height:10px; border-radius:50%; background:var(--accent-br); box-shadow:0 0 12px var(--accent-br)}
 
 /* bento */
@@ -227,6 +227,19 @@ body::after{content:""; position:fixed; inset:0; z-index:1; pointer-events:none;
   .counters{gap:20px}
   .faq summary{font-size:1rem}
   .corner-brand .wordmark{font-size:.92rem}
+}
+/* large screens: use more width, scale up so it never looks narrow */
+@media (min-width:1500px){
+  :root{--maxw:1440px}
+  .display{font-size:clamp(4rem,5vw,5.6rem)}
+  .hero__device .phone{max-width:420px}
+  .tour__phone .phone{max-width:380px}
+  .privacy__viz .phone{max-width:380px}
+  .lede{font-size:1.18rem; max-width:36ch}
+}
+@media (min-width:1850px){
+  :root{--maxw:1560px}
+  .hero__device .phone{max-width:460px}
 }
 
 /* reduced motion safety net */
