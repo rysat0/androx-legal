@@ -134,8 +134,8 @@
       var h = document.querySelector(".hero");
       h.addEventListener("pointermove", function (ev) {
         var r = h.getBoundingClientRect();
-        var rx = ((ev.clientY - r.top) / r.height - 0.5) * -5;
-        var ry = ((ev.clientX - r.left) / r.width - 0.5) * 5;
+        var rx = ((ev.clientY - r.top) / r.height - 0.5) * -2.6;
+        var ry = ((ev.clientX - r.left) / r.width - 0.5) * 2.6;
         tilt.style.transform = "perspective(1100px) rotateX(" + rx + "deg) rotateY(" + ry + "deg)";
       });
       h.addEventListener("pointerleave", function () { tilt.style.transform = ""; });
