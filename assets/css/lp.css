@@ -32,7 +32,7 @@ em{font-style:normal; color:var(--accent-br)}
 .display--sm{font-size:clamp(2.1rem,5.4vw,3.6rem)}
 .h2{font-weight:700; letter-spacing:-.025em; line-height:1.06; font-size:clamp(1.7rem,3.6vw,2.6rem); margin:0; color:var(--text)}
 .eyebrow{font-size:.78rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--accent-br); margin:0 0 20px}
-.lede{font-size:clamp(1.05rem,1.7vw,1.28rem); line-height:1.5; color:var(--dim); font-weight:400; margin:18px 0 0; max-width:34ch}
+.lede{font-size:clamp(.96rem,1.25vw,1.1rem); line-height:1.55; color:var(--dim); font-weight:400; margin:16px 0 0; max-width:33ch}
 .micro{font-size:.82rem; color:var(--faint); margin:22px 0 0; letter-spacing:0; max-width:46ch}
 .wordmark{font-weight:700; letter-spacing:.16em; font-size:1.05rem}
 .wordmark span{color:var(--accent)}
@@ -82,9 +82,9 @@ body::after{content:""; position:fixed; inset:0; z-index:1; pointer-events:none;
 .hero__device .phone{max-width:360px}
 .cta-row{display:flex; align-items:center; gap:18px; margin-top:30px; flex-wrap:wrap}
 .cta-row--center{justify-content:center}
-.badge-link img{height:48px; width:auto; display:block}
+.badge-link img{height:44px; width:auto; display:block}
 .nav__cta img{height:38px}
-.ghost{font-size:.88rem; font-weight:600; color:var(--text); padding:11px 18px; border:1px solid var(--hair); border-radius:999px; transition:border-color .2s,background .2s}
+.ghost{font-size:.84rem; font-weight:600; color:var(--text); padding:10px 16px; border:1px solid var(--hair); border-radius:999px; transition:border-color .2s,background .2s}
 .ghost:hover{border-color:rgba(217,68,37,.5); background:rgba(217,68,37,.06)}
 
 /* takeaways */
@@ -214,8 +214,9 @@ body::after{content:""; position:fixed; inset:0; z-index:1; pointer-events:none;
 /* phones */
 @media (max-width:520px){
   body{font-size:16px}
-  .display{font-size:clamp(2.1rem,8.6vw,2.7rem)}
-  .badge-link img{height:50px}
+  .display{font-size:clamp(2rem,8.2vw,2.6rem)}
+  .badge-link img{height:42px}
+  .lede{font-size:.96rem}
   .cta-row{gap:12px}
   .chips{gap:9px} .chips li{padding:9px 15px; font-size:.84rem}
   .tour__phone .phone{max-width:200px}
