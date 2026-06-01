@@ -26,8 +26,8 @@ em{font-style:normal; color:var(--accent-br)}
 :focus-visible{outline:2px solid var(--accent-br); outline-offset:3px; border-radius:6px}
 
 /* type scale */
-.display{font-weight:700; line-height:1.02; letter-spacing:-.035em;
-  font-size:clamp(2.6rem,7.2vw,5.4rem); margin:0;
+.display{font-weight:700; line-height:1.03; letter-spacing:-.035em;
+  font-size:clamp(2.3rem,5.2vw,4.3rem); margin:0;
   background:linear-gradient(176deg,#fff, #efe7e3 72%); -webkit-background-clip:text; background-clip:text; color:transparent;}
 .display--sm{font-size:clamp(2.1rem,5.4vw,3.6rem)}
 .h2{font-weight:700; letter-spacing:-.025em; line-height:1.06; font-size:clamp(1.7rem,3.6vw,2.6rem); margin:0; color:var(--text)}
@@ -76,7 +76,7 @@ body::after{content:""; position:fixed; inset:0; z-index:1; pointer-events:none;
 .phone::after{content:""; position:absolute; top:3.2%; left:50%; transform:translateX(-50%); width:30%; height:2.3%; background:#050404; border-radius:99px; z-index:3}
 
 /* hero */
-.hero{position:relative; min-height:100svh; display:flex; align-items:center; padding:120px 0 70px; overflow:hidden}
+.hero{position:relative; min-height:100svh; display:flex; align-items:safe center; padding:92px 0 56px; overflow:hidden}
 .hero__in{position:relative; z-index:2; max-width:var(--maxw); margin:0 auto; padding:0 24px; width:100%;
   display:grid; grid-template-columns:1.05fr .95fr; gap:40px; align-items:center}
 .hero__device .phone{max-width:360px}
@@ -96,12 +96,12 @@ body::after{content:""; position:fixed; inset:0; z-index:1; pointer-events:none;
 /* tour: pinned phone + steps */
 .tour{position:relative; max-width:var(--maxw); margin:0 auto; padding:60px 24px;
   display:grid; grid-template-columns:.95fr 1.05fr; gap:60px; align-items:start}
-.tour__phone{position:sticky; top:14vh; height:72vh; display:flex; align-items:center; justify-content:center; order:2}
+.tour__phone{position:sticky; top:16vh; height:66vh; display:flex; align-items:center; justify-content:center; order:2}
 .tour__phone .phone{max-width:330px}
 .tour__phone .screen{position:absolute; inset:2.4%; width:auto; height:auto; opacity:0; transition:opacity .6s var(--ease)}
 .tour__phone .screen.is-active{opacity:1}
 .tour__steps{order:1; display:flex; flex-direction:column}
-.step{min-height:78vh; display:flex; flex-direction:column; justify-content:center; padding:24px 0}
+.step{min-height:62vh; display:flex; flex-direction:column; justify-content:center; padding:24px 0}
 .step__n{font-size:.8rem; font-weight:700; letter-spacing:.2em; color:var(--accent-br); margin-bottom:14px}
 .step h2{margin-bottom:14px}
 .step p{color:var(--dim); margin:0; max-width:36ch; font-size:1.08rem; line-height:1.5}
@@ -166,28 +166,65 @@ body::after{content:""; position:fixed; inset:0; z-index:1; pointer-events:none;
 .foot__col a:hover{color:var(--accent-br)}
 .foot__disc{max-width:var(--maxw); margin:0 auto; padding:22px 24px 60px; color:var(--faint); font-size:.78rem; line-height:1.6; border-top:1px solid var(--hair)}
 
+/* corner brand (top-left) + footer StepAI */
+.corner-brand{position:absolute; top:24px; left:clamp(18px,4vw,28px); z-index:30; display:flex; flex-direction:column; gap:3px; line-height:1}
+.corner-brand .wordmark{font-size:1rem; letter-spacing:.16em; color:var(--text)}
+.corner-brand .wordmark span{color:var(--accent)}
+.corner-brand .by{font-size:.64rem; letter-spacing:.18em; text-transform:uppercase; color:var(--faint); padding-left:1px}
+.foot__step{max-width:var(--maxw); margin:0 auto; padding:8px 24px 2px; display:flex; flex-direction:column; align-items:center; gap:7px; text-align:center}
+.foot__step .wordmark{font-size:1.3rem; letter-spacing:.22em; color:var(--text)}
+.foot__step span:last-child{font-size:.78rem; color:var(--faint); letter-spacing:.03em}
+
 /* reveal */
 [data-reveal]{opacity:0; transform:translateY(22px); transition:opacity .7s var(--ease-out), transform .7s var(--ease-out)}
 [data-reveal].is-visible{opacity:1; transform:none}
 
 /* responsive */
-@media (max-width:900px){
-  .hero__in{grid-template-columns:1fr; gap:30px; text-align:center}
+/* tablet: scale devices down */
+@media (max-width:1024px){
+  .hero__in{gap:30px}
+  .hero__device .phone{max-width:300px}
+  .tour{gap:40px}
+  .tour__phone .phone{max-width:286px}
+  .privacy__viz .phone{max-width:262px}
+}
+/* stack to single column */
+@media (max-width:880px){
+  .nav__in{padding:11px 18px}
+  .nav__links a:not(.nav__cta){display:none}
+  .hero{padding:84px 0 52px}
+  .hero__in{grid-template-columns:1fr; gap:24px; text-align:center}
   .hero__copy{order:1} .hero__device{order:2}
+  .hero__device .phone{max-width:262px}
   .lede,.micro{margin-inline:auto} .cta-row{justify-content:center}
-  .tour{grid-template-columns:1fr; gap:0}
-  .tour__phone{position:static; height:auto; order:0; margin-bottom:10px}
+  .corner-brand{top:18px}
+  .tour{grid-template-columns:1fr; gap:0; padding:30px 22px}
+  .tour__phone{position:sticky; top:72px; height:auto; order:0; margin:0 auto 6px}
+  .tour__phone .phone{max-width:218px}
   .tour__steps{order:1}
-  .step{min-height:auto; padding:34px 0; text-align:center} .step p{margin-inline:auto}
-  .privacy__in{grid-template-columns:1fr; gap:34px; text-align:center} .counters{justify-content:center}
-  .bento__grid{grid-template-columns:1fr 1fr} .cell--focal{grid-row:auto; grid-column:1/-1}
-  .foot__in{grid-template-columns:1fr 1fr}
+  .step{min-height:48vh; padding:22px 0; text-align:center} .step p{margin-inline:auto}
+  .privacy{padding:80px 22px}
+  .privacy__in{grid-template-columns:1fr; gap:28px; text-align:center} .counters{justify-content:center}
+  .privacy__viz{order:-1} .privacy__viz .phone{max-width:230px}
+  .bento{padding:80px 22px} .bento__grid{grid-template-columns:1fr 1fr} .cell--focal{grid-row:auto; grid-column:1/-1}
+  .final{padding:90px 22px}
+  .foot__in{grid-template-columns:1fr 1fr; gap:24px}
   .mobar{display:flex}
 }
+/* phones */
 @media (max-width:520px){
   body{font-size:16px}
-  .bento__grid{grid-template-columns:1fr} .foot__in{grid-template-columns:1fr}
-  .counters{gap:22px}
+  .display{font-size:clamp(2.1rem,8.6vw,2.7rem)}
+  .badge-link img{height:50px}
+  .cta-row{gap:12px}
+  .chips{gap:9px} .chips li{padding:9px 15px; font-size:.84rem}
+  .tour__phone .phone{max-width:200px}
+  .hero__device .phone{max-width:232px}
+  .bento__grid{grid-template-columns:1fr}
+  .foot__in{grid-template-columns:1fr; gap:22px}
+  .counters{gap:20px}
+  .faq summary{font-size:1rem}
+  .corner-brand .wordmark{font-size:.92rem}
 }
 
 /* reduced motion safety net */
