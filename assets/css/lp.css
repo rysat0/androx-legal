@@ -4,7 +4,7 @@
   --text:#F5F0EE; --dim:rgba(245,240,238,.62); --faint:rgba(245,240,238,.40);
   --hair:rgba(245,240,238,.09);
   --accent:#D94425; --accent-br:#FF6B4A;
-  --maxw:min(1600px, 94vw);
+  --maxw:min(2400px, 94vw);
   --sans:-apple-system,"SF Pro Text","SF Pro Display","Hanken Grotesk",system-ui,"Segoe UI",sans-serif;
   --ease:cubic-bezier(.2,.7,.2,1);
   --ease-out:cubic-bezier(.16,1,.3,1);
@@ -232,16 +232,34 @@ body::after{content:""; position:fixed; inset:0; z-index:1; pointer-events:none;
   .faq summary{font-size:1rem}
   .corner-brand .wordmark{font-size:.92rem}
 }
-/* large screens: use more width, scale up so it never looks narrow */
+/* large screens: container tracks the window (94vw up to 2400px),
+   and devices/type/spacing scale with vw so the whole composition
+   grows proportionally and FILLS the window instead of capping. */
 @media (min-width:1500px){
-  .display{font-size:clamp(4rem,5vw,5.6rem)}
-  .hero__device .phone{max-width:420px}
-  .tour__phone .phone{max-width:380px}
-  .privacy__viz .phone{max-width:380px}
-  .lede{font-size:1.18rem; max-width:36ch}
+  .display{font-size:clamp(4rem,5.2vw,6.4rem)}
+  .h2{font-size:clamp(2.2rem,3.4vw,3.4rem)}
+  .hero__in{gap:clamp(48px,5vw,120px)}
+  .hero__device .phone{max-width:clamp(420px,26vw,620px)}
+  .tour{gap:clamp(56px,5vw,120px)}
+  .tour__phone .phone{max-width:clamp(380px,24vw,560px)}
+  .privacy__viz .phone{max-width:clamp(380px,24vw,560px)}
+  .lede{font-size:clamp(1.18rem,1.2vw,1.5rem); max-width:38ch}
+  .chips li{font-size:clamp(.9rem,.8vw,1.08rem)}
+  .step p{font-size:clamp(1.08rem,1.1vw,1.4rem); max-width:38ch}
+  .bento__grid{gap:clamp(16px,1.4vw,28px)}
+  .cell p{font-size:clamp(.98rem,.95vw,1.18rem)}
+  .faq summary{font-size:clamp(1.1rem,1.05vw,1.32rem)}
 }
-@media (min-width:1850px){
-  .hero__device .phone{max-width:460px}
+/* very wide / external monitors: bigger devices + rebalanced hero so it fills */
+@media (min-width:2000px){
+  body{font-size:clamp(17px,.9vw,22px)}
+  .hero__in{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); gap:clamp(80px,6vw,160px)}
+  .hero__device .phone{max-width:clamp(560px,28vw,760px)}
+  .tour__phone .phone{max-width:clamp(480px,25vw,640px)}
+  .privacy__viz .phone{max-width:clamp(480px,25vw,640px)}
+  .display{font-size:clamp(5.6rem,5.4vw,8rem)}
+  .hero,.bento,.privacy,.final{padding-top:clamp(110px,7vw,180px); padding-bottom:clamp(110px,7vw,180px)}
+  .tour{padding-top:clamp(72px,5vw,120px); padding-bottom:clamp(72px,5vw,120px)}
 }
 
 /* reduced motion safety net */
