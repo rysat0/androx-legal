@@ -198,11 +198,12 @@ body::after{content:""; position:fixed; inset:0; z-index:1; pointer-events:none;
   .hero__device .phone{max-width:262px}
   .lede,.micro{margin-inline:auto} .cta-row{justify-content:center}
   .corner-brand{top:18px}
-  .tour{grid-template-columns:1fr; gap:0; padding:30px 22px}
-  .tour__phone{position:sticky; top:72px; height:auto; order:0; margin:0 auto 6px}
-  .tour__phone .phone{max-width:218px}
+  .tour{grid-template-columns:1fr; gap:0; padding:24px 22px}
+  .tour__phone{position:sticky; top:60px; height:auto; order:0; margin:0; justify-self:stretch; z-index:2;
+    padding:8px 0 14px; background:radial-gradient(72% 82% at 50% 40%, var(--bg) 62%, transparent)}
+  .tour__phone .phone{max-width:198px}
   .tour__steps{order:1}
-  .step{min-height:48vh; padding:22px 0; text-align:center} .step p{margin-inline:auto}
+  .step{min-height:54vh; padding:20px 0; text-align:center} .step p{margin-inline:auto}
   .privacy{padding:80px 22px}
   .privacy__in{grid-template-columns:1fr; gap:28px; text-align:center} .counters{justify-content:center}
   .privacy__viz{order:-1} .privacy__viz .phone{max-width:230px}
