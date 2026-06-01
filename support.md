@@ -21,7 +21,7 @@ In the app: **Settings → Delete Account**. This deletes your account on our se
 アプリ内の **設定 → アカウント削除** から、サーバー上のアカウントと、この端末内のデータ（記録・週次レポート）を削除できます。
 
 ### Where is my data stored? / データはどこに保存されますか？
-All Apple Health data and manual logs are stored only on your device. See our [Privacy Policy](./) for details.
+All Apple Health data and manual logs are stored only on your device. See our [Privacy Policy](/androx-legal/privacy/) for details.
 Apple Health 由来のデータと手入力の記録は、すべて利用者の端末内にのみ保存されます。詳しくは[プライバシーポリシー](./)をご覧ください。
 
 ### Requirements / 動作環境
